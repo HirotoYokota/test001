@@ -71,17 +71,17 @@ def button_to_jump(btn,newpage):
 ## ゲームステージ
 def gamestage():
 
-    # 3.画面を初期化する
+# 3.画面を初期化する
     global rightFlag
     global page
     screen.fill(pg.Color("DEEPSKYBLUE"))
     vx=0
     vy=0
 
-    # 4,ユーザーからの入力を調べる
+# 4,ユーザーからの入力を調べる
     key=pg.key.get_pressed()
 
-    # 5.画を描いたり、判定したりする
+# 5.画を描いたり、判定したりする
     if(key[pg.K_RIGHT]):
         vx=5
         rightFlag=True
@@ -122,11 +122,11 @@ while True:
     elif page == 2:
         gameover()
 
-    # 6.画面を表示する
+# 6.画面を表示する
     pg.display.update()
     pg.time.Clock().tick(60)
 
-    # 7.閉じるボタンが押されたら終了する
+# 7.閉じるボタンが押されたら終了する
     for event in pg.event.get():
         if event.type==pg.QUIT:
             pg.quit()
